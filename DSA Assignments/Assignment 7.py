@@ -1,21 +1,26 @@
 # Question 2: Given three points, check whether they lie on a straight (collinear) or not.
 
+# Time complexity = O(1)
 def CheckCollinear(points):
     #using area of triangle method.
     x1,x2,x3 = points[0][0],points[1][0],points[2][0]
     y1,y2,y3 = points[0][1],points[1][1],points[2][1]
     area = 1/2*(x1*(y2-y3) + x2*(y3-y1) + x3*(y1-y2))
-    if area ==0:
+    if area == 0:
         return 'Yes'
     else:
         return 'No'
-    
+
 # driver code
 points = [(1,1), (1,4), (1,5)]
 result = CheckCollinear(points)
-print(result)
+print("Whether the given points are collinear?",result)
 
-#Question 3:
+"""Question 3: An e-commerce site tracks the purchases made each day. The product that is purchased
+the most one day is the featured product for the following day. If there is a tie for the product
+purchased most frequently, those product names are ordered alphabetically ascending and
+the last name in the list is chosen.[Amazon]"""
+
 from collections import Counter
 import heapq
 def MostFrequentPurchase(purchases):
