@@ -25,7 +25,7 @@ your code.
 
 """
 # Time complexity O(logn), because by using binary search we divide the array everytime by 2,
-# So we get the time complexity as logn to the base 2,when solved using substitution method or master's theorem.
+# So we get the time complexity as logn to the base 2,when solved using substitution method or Master's theorem.
 def FirstBadOne(Version,left,right):
     if left == right:
         return left
