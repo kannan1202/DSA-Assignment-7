@@ -16,9 +16,9 @@ def SelectionProcedure(arr,p,q,k):
     if p == q:
         return arr[p]
     elif p < q:
-        position = partition(arr,p,q)
+        position = partition(arr,p,q) #position of the pivot element gives the kth smallest or largest element.
         if position == k:
-            return arr[position-1]
+            return arr[position-1] #index of the pivot element.(kth smallest element in this case.)
         elif k < position:
             SelectionProcedure(arr,p,position-1,k)
         else:
@@ -79,9 +79,9 @@ def SelectionProcedure(arr,p,q,k):
         if k == position:
             return arr[position-1]
         elif k < position:
-            SelectionProcedure(arr,p,position-1,k)
-        else:
             SelectionProcedure(arr,position+1,q,k)
+        else:
+            SelectionProcedure(arr,p,position-1,k)
 
 #driver code
 arr = [40, 30, 25, 68, 79, 52, 66, 89, 97]
